@@ -1,0 +1,8 @@
+{% if (ansible_facts['date_time']['hour'] <= 12) and (ansible_facts['date_time']['hour'] >= 0) -%}
+Morning
+{% elif (ansible_facts['date_time']['hour'] >= 12) and (ansible_facts['date_time']['hour'] <= 17) %}
+Afternoon
+{% elif (ansible_facts['date_time']['hour'] >= 17) and (ansible_facts['date_time']['hour'] <= 0) %}
+Evening
+{% endif %}
+{{ inventory_hostname }}, {{ ansible_default['ipv4'] }}, {{ group_names[0] }}
