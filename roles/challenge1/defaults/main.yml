@@ -1,0 +1,9 @@
+---
+# defaults file for challenge1
+users:
+  - first: Bob
+    last: Builder
+    username: bbuilder
+    group: dev
+    uid: 1230
+...

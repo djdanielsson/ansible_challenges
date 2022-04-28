@@ -1,0 +1,8 @@
+---
+# handlers file for challenge1
+- name: nginx
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    enabled: true
+...
