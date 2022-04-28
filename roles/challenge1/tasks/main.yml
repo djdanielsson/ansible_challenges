@@ -1,7 +1,7 @@
 ---
 - name: Ensure nginx is installed
   ansible.builtin.package:
-    name: 
+    name:
       - "nginx"
       - "python3-libselinux"
       - "policycoreutils-python-utils"
@@ -22,8 +22,8 @@
 - name: Ensure test.html is correct
   ansible.builtin.replace:
     path: /var/www/html/test.html
-    regexp: ' TeSt '
-    replace: ' test '
+    regexp: '(^| )TeSt '
+    replace: '\1test '
 
 - name: Ensure firewall ports and services are open
   ansible.posix.firewalld:
