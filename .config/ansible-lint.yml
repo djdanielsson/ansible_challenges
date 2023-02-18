@@ -1,0 +1,25 @@
+---
+# Mock modules or roles in order to pass ansible-playbook --syntax-check
+# mock_modules:
+#   - ansible.controller.controller_api
+
+# mock_roles:
+#   - infra.controller_config.users
+
+exclude_paths:
+  - "${PWD}/.github/"
+
+# Ansible Linter rules
+skip_list:
+  - yaml[colons]                   # Violations reported by yamllint.
+  - yaml[line-length]              # Violations reported by yamllint.
+  - yaml[new-line-at-end-of-file]  # Violations reported by yamllint.
+
+warn_list:  # or 'skip_list' to silence them completely
+  - risky-file-permissions    # File permissions unset or incorrect.
+  - risky-shell-pipe          # Shells that use pipes should set the pipefail option.
+  - template-instead-of-copy  # Templated files should use template instead of copy
+  - command-instead-of-shell  # Use shell only when shell functionality is required.
+  - package-latest            # Package installs should not use latest.
+  - git-latest                # Allow for newest git version
+...
