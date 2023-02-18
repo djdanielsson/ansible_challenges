@@ -19,7 +19,7 @@ serverc.example.com
 
 2) There is a file called test.html in /var/www/html which needs to be accessible from the web. In that file there are multiple typos of the word TeSt that should be test. Everything else in the file should remain the same.
 
-3) Ensure each user(s) from a list called users exists on the system setting the username to the username value, along with adding them to a group (same with UID) if given, and generate a password if a password isn't already set for each user that has alpha numeric and special characters in it. This password should be saved in a file /root/.USERNAME.password with the permissions 700.
+3) Ensure each user(s) from a list called users exists on the system setting the username to the username value, along with adding them to a group (same with UID) only if provided, and generate a password if a password isn't already set for each user that has alpha numeric and special characters in it. This password should be saved in a file /root/.USERNAME.password with the permissions 700.
 
 eg.
 
